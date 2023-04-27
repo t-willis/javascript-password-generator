@@ -33,14 +33,24 @@ var generateBtn = document.querySelector("#generate");
 
 // prompt for password length
 var passLength = prompt("Enter length of password, no less than 8 characters no more than 128");
-  while (passLength < 8 || passLength > 128) {
+  while (passLength < 8 || passLength > 128 || isNaN) {
     window.alert("Please use a number between 8 and 128!");
     passLength = prompt("Enter length of password, no less than 8 characters no more than 128");
   }
 
+var lowerConfirm = confirm("Would you like to use lowercase letters? Confirm: Yes, Cancel: No");
+var upperConfirm = confirm("Would you like to use UPPERCASE letters? Confirm: Yes, Cancel: No");
+var numberConfirm = confirm("Would you like to use numbers?  Confirm: Yes, Cancel: No");
+var specialConfirm = confirm("Would you like to use special characters?  Confirm: Yes, Cancel: No");
+
+
 
 function testLengthPrint() {
   console.log(passLength);
+  console.log(lowerConfirm);
+  console.log(upperConfirm);
+  console.log(numberConfirm);
+  console.log(specialConfirm);
 }
 
 testLengthPrint();
