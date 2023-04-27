@@ -33,7 +33,7 @@ var generateBtn = document.querySelector("#generate");
 
 // prompt for password length
 var passLength = prompt("Enter length of password, no less than 8 characters no more than 128");
-  while (passLength < 8 || passLength > 128 || isNaN) {
+  while (passLength < 8 || passLength > 128 || isNaN(passLength)) {
     window.alert("Please use a number between 8 and 128!");
     passLength = prompt("Enter length of password, no less than 8 characters no more than 128");
   }
