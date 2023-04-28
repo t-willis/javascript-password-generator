@@ -52,6 +52,14 @@ function generatePassword() {
   if (specialConfirm === true) {
     charSet += characters.specialCharacters;
   }
+  if (
+    lowerConfirm === false &&
+    upperConfirm === false &&
+    numberConfirm === false &&
+    specialConfirm === false
+  ) {
+    alert("You must choose at least one data type!");
+  }
 
   // variable passwordGend for loop to generate the random password
   var passwordGend = "";
