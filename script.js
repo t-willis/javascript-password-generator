@@ -53,13 +53,14 @@ function generatePassword() {
     charSet += characters.specialCharacters;
   }
 
-
-  var passwordGend = ""
+  // variable passwordGend for loop to generate the random password
+  var passwordGend = "";
   for (let i = 0; i < passLength; i++) {
     var randomGen = charSet.charAt(Math.floor(Math.random() * charSet.length));
-    passwordGend += randomGen;    
+    passwordGend += randomGen;
   }
 
+  // return for generated password
   return passwordGend;
 }
 
