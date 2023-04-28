@@ -53,12 +53,14 @@ function generatePassword() {
     charSet += characters.specialCharacters;
   }
 
-  console.log(charSet);
 
+  var passwordGend = ""
+  for (let i = 0; i < passLength; i++) {
+    var randomGen = charSet.charAt(Math.floor(Math.random() * charSet.length));
+    passwordGend += randomGen;    
+  }
 
-
-
-  return "";
+  return passwordGend;
 }
 
 // Write password to the #password input
