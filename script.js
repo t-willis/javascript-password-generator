@@ -1,3 +1,6 @@
+// possible addition:
+// confirm() displaying choices
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -22,7 +25,7 @@ function generatePassword() {
     );
   }
 
-  // confirm boxes for used character styles
+  // confirm boxes for chosen character styles
   var lowerConfirm = confirm(
     "Would you like to use lowercase letters? Confirm: Yes, Cancel: No"
   );
@@ -61,9 +64,9 @@ function generatePassword() {
     alert("You must choose at least one data type!");
   }
 
-  // variable passwordGend for loop to generate the random password
+  // var passwordGend for loop to generate the random password
   var passwordGend = "";
-  for (let i = 0; i < passLength; i++) {
+  for (var i = 0; i < passLength; i++) {
     var randomGen = charSet.charAt(Math.floor(Math.random() * charSet.length));
     passwordGend += randomGen;
   }
