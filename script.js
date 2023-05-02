@@ -31,16 +31,16 @@ function generatePassword() {
 
   // confirm boxes for chosen character styles
   var lowerConfirm = confirm(
-    "Would you like to use lowercase letters? Confirm: Yes, Cancel: No"
+    "Would you like to use lowercase letters? Ok: Yes, Cancel: No"
   );
   var upperConfirm = confirm(
-    "Would you like to use UPPERCASE letters? Confirm: Yes, Cancel: No"
+    "Would you like to use UPPERCASE letters? Ok: Yes, Cancel: No"
   );
   var numberConfirm = confirm(
-    "Would you like to use numbers?  Confirm: Yes, Cancel: No"
+    "Would you like to use numbers?  Confirm: Ok: Cancel: No"
   );
   var specialConfirm = confirm(
-    "Would you like to use special characters?  Confirm: Yes, Cancel: No"
+    "Would you like to use special characters?  Ok: Yes, Cancel: No"
   );
 
   // empty variable to add strings to
