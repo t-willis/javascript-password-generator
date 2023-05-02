@@ -61,7 +61,7 @@ function generatePassword() {
     numberConfirm === false &&
     specialConfirm === false
   ) {
-    alert("You must choose at least one data type!");
+    alert("You must choose at least one data type. Please click the generate button to start over!");
   }
 
   // var passwordGend for loop to generate the random password
