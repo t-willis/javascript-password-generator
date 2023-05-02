@@ -1,6 +1,3 @@
-// possible addition:
-// confirm() displaying choices
-
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -14,15 +11,22 @@ function generatePassword() {
     specialCharacters: "!#$%&'()*+,-.:;<=>?@[]^_`{|}~",
   };
 
-  // prompt for password length
+  // prompt for password length, close prompt if cancel
   var passLength = prompt(
     "Enter length of password, no less than 8 characters no more than 128"
   );
+  if (passLength === null) {
+    return;
+  }
+  // checking password length for correct values, re-prompting if necessary, close prompt if cancel
   while (passLength < 8 || passLength > 128 || isNaN(passLength)) {
     window.alert("Please use a number between 8 and 128!");
     passLength = prompt(
       "Enter length of password, no less than 8 characters no more than 128"
     );
+    if (passLength === null) {
+      return;
+    }
   }
 
   // confirm boxes for chosen character styles
@@ -61,7 +65,8 @@ function generatePassword() {
     numberConfirm === false &&
     specialConfirm === false
   ) {
-    alert("You must choose at least one data type. Please click the generate button to start over!");
+    alert("You must choose at least one data type!");
+    generatePassword();
   }
 
   // var passwordGend for loop to generate the random password
